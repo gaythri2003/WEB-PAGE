@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    position: relative;
+    height: 400px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    z-index: 5; 
+}
+
+header h1 {
+    position: relative;
+    z-index: 3; 
+    margin: 0;
+    padding: 150px 0;
+    font-size: 3em;
+    
+}
+
+/* Navbar styling */
+nav {
+    position: relative; 
+    z-index: 4; 
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.slideshow {
+    position: relative;
+}
+
+.slideshow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 15s infinite;
+    z-index: 1; 
+    
+}
+
+
+@keyframes slideShow {
+    0%   { background-image: url('./Images/1.jpg'); }
+    33%  { background-image: url('./Images/ayodhya.webp'); }
+    66%  { background-image: url('./Images/baranti.webp'); }
+    100% { background-image: url('./Images/1.jpg'); }
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    padding: 20px;
+}
+
+.cta-button {
+    background-color: #ff6b6b;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #ff4747;
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 20px;
+    background-color: #eee;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-container img {
+    width: 20%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4747;
+}
+
+/* Footer Styles */
+.footer {
+   background-color: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+.footer-left, .footer-right {
+    width: 45%;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Newsletter Form */
+#subscribe-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#subscribe-email {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <header class="slideshow">
+        <nav>
+            <h1>KINGSUKH GUEST HOUSE</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Welcome to Our Guest House</h2>
+            <p>Experience luxury and comfort during your stay.</p>
+            <a href="#contact" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <img src="./Images/service.jpg" alt="Service Room">
+                <h3>Free WiFi</h3>
+                <p>Stay connected with our high-speed internet service.</p>
+            </div>
+            <div class="service">
+                <img src="./Images/small.jpg" alt="Small Bedroom">
+                <h3>Comfortable Bedrooms</h3>
+                <p>Relax in our cozy small bedroom with modern amenities.</p>
+            </div>
+            <div class="service">
+                <img src="./Images/room1.jpg" alt="Normal Room">
+                <h3>Spacious Rooms</h3>
+                <p>Stay in spacious, fully furnished rooms with a great view.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="./Images/mithonDam.webp" alt="Dam View">
+            <img src="./Images/palash.webp" alt="Flower View">
+            <img src="./Images/out.jpg" alt="Outside View">
+            
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <h3>Kingsukh Guest House</h3>
+            <p>
+                123 Luxury Street,<br>
+                Hilltop, Wonderland 45678<br>
+                Phone: +1 (234) 567-8901<br>
+                Email: contact@kingsukhguesthouse.com
+            </p>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+        
+            <div class="social-icons">
+                <a href="https://twitter.com"><img src="twitter.png" alt="Twitter Logo"></a>
+                <a href="https://facebook.com"><img src="facebook.png" alt="Facebook Logo"></a>
+                <a href="https://youtube.com"><img src="youtube.png" alt="YouTube Logo"></a>
+            </div>
+        
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Kingsukh Guest House. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="Guest.js"></script>
+</body>
+</html>
